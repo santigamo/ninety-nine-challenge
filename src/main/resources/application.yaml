@@ -1,0 +1,5 @@
+database.connection:
+  username:
+    ${DATABASE_USERNAME:test-user}
+  password:
+    ${DATABASE_PASSWORD:test-password}
