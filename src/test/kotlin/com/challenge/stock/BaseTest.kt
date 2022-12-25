@@ -1,4 +1,4 @@
-package com.codely.api
+package com.challenge.stock
 
 import io.mockk.every
 import io.mockk.mockkStatic

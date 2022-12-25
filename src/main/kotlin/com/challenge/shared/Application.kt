@@ -1,11 +1,11 @@
-package com.codely.shared
+package com.challenge.shared
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.context.annotation.ComponentScan
 
 @SpringBootApplication
-@ComponentScan("com.codely")
+@ComponentScan("com.challenge")
 class Application
 
 fun main(args: Array<String>) {

@@ -1,7 +1,8 @@
-package com.codely.api.application
+package com.challenge.stock.application
 
-import com.codely.api.BaseTest
-import com.codely.api.domain.*
+import com.challenge.stock.application.StockCreator
+import com.challenge.stock.domain.*
+import com.challenge.stock.BaseTest
 import io.mockk.mockk
 import io.mockk.verify
 import org.junit.jupiter.api.BeforeEach

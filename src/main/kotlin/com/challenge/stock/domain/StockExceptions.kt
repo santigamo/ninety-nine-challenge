@@ -1,4 +1,4 @@
-package com.codely.api.domain
+package com.challenge.stock.domain
 
 sealed class StockExceptions(override val message: String, override val cause: Throwable? = null) : Exception(message, cause)
 

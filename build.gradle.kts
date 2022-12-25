@@ -10,7 +10,7 @@ plugins {
     application
 }
 
-group = "com.codely"
+group = "com.challenge"
 version = "0.0.1"
 java.sourceCompatibility = JavaVersion.VERSION_11
 
@@ -29,6 +29,7 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.mockk:mockk:1.13.2")
+
 }
 
 tasks.withType<KotlinCompile> {
