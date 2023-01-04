@@ -44,4 +44,3 @@ data class Company constructor(
         fun from(name: String, price: Double) = Company(name, price)
     }
 }
-)
