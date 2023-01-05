@@ -1,94 +1,25 @@
-<p align="center">
-  <a href="https://codely.com">
-    <img src="https://user-images.githubusercontent.com/10558907/170513882-a09eee57-7765-4ca4-b2dd-3c2e061fdad0.png" width="300px" height="92px" alt="Codely logo"/>
-  </a>
-</p>
+## 👀 Overview
+This backend system is a fintech application that retrieves and stores information about companies and their share prices. The system fetches data from a mocked data provider and refreshes the data at least every 20 seconds to show the current real share price.
 
-<h1 align="center">
-  💎 Kotlin HTTP API Skeleton
-</h1>
+## 📖 Architecture
+The system follows a hexagonal architecture, with the application layer interacting with the external system through a data provider interface. This allows the application layer to be isolated from the implementation details of the external system and makes it easier to test and maintain the code.
 
-<p align="center">
-    <a href="https://github.com/CodelyTV/kotlin-api-skeleton/actions/workflows/ci.yml"><img src="https://github.com/CodelyTV/kotlin-api-skeleton/actions/workflows/ci.yml/badge.svg" alt="Build status"/></a>
-    <a href="https://github.com/CodelyTV"><img src="https://img.shields.io/badge/CodelyTV-OS-green.svg?style=flat-square" alt="Codely Open Source"/></a>
-    <a href="https://pro.codely.com"><img src="https://img.shields.io/badge/CodelyTV-PRO-black.svg?style=flat-square" alt="CodelyTV Courses"/></a>
-</p>
+## 🤖 Technologies
+- Kotlin: The backend system is implemented using Kotlin, a modern programming language that is interoperable with Java and runs on the Java Virtual Machine.
+- Spring Boot: The system uses Spring Boot as the web framework to handle HTTP requests and responses.
 
-<p align="center">
-  Template intended to serve as a starting point if you want to <strong>bootstrap a Kotlin HTTP API</strong>.
-  <br />
-  <br />
-  Take a look, play and have fun with this.
-  <a href="https://github.com/CodelyTV/kotlin-api-skeleton/stargazers">Stars are welcome 😊</a>
-</p>
+## ☝️ How to run this project
+1. Move to the project directory: `cd ninety-nine-challenge`
+2. Build the project for the first time: `./gradlew build`
+3. To just run the project execute: `./gradlew run`
 
-This is a repository intended to serve as a starting point if you want to bootstrap an API in Kotlin.
+## 🎯 API Calls
+- `GET /api/v1/health` - Health check
+- `GET /stocks` - Get a list of stocks
+- `GET /stocks/{name}` - Get a stock by name; ex: `GET /stocks/AAPL`
+- `GET /companies/{name}/time-series?type={hourly|daily|weekly}` - Returns the time series of the share price of the stock with the given name for the specified time period (hourly, daily, or weekly).
 
-## ☝️ Introduction
+## ⚠ Comments
+This is my first time using Kotlin, so it is possible that the project has bugs. I would appreciate any feedback on how to improve the code. 
 
-It could be useful if you want to start from scratch a kata or a little exercise or project. The idea is that you don't have to worry about the boilerplate
-* Latest stable kotlin version
-* Latest stable Springboot version
-* Latest stable Springboot version
-* Latest stable java version
-* Best practices applied
-* Some useful resources to start coding
-
-## 🌎 How To Start
-
-You could manually clone [this repo](https://github.com/CodelyTV/kotlin-api-skeleton) or just us it as a template
-
-### Cloning the repository
-
-We recommend to follow the next step by step process in order to avoid adding the bootstrap project commits to your project Git history:
-
-1. [Use this repositoy template](https://github.com/CodelyTV/kotlin-api-skeleton/generate)
-2. Clone your project
-3. Move to the project directory: `cd your-project-name`
-4. Build the project for the first time: `./gradlew build`
-5. Run all the checks: `./gradlew check`. This will do some checks that you can perform with isolated commands:
-    1. [Klint](https://ktlint.github.io/) using [Spotless](https://github.com/diffplug/spotless): `./gradlew spotlessCheck`. If you want to fix style issues automatically: `./gradlew spotlessApply`.
-    2. [Kotlin test](https://kotlinlang.org/api/latest/kotlin.test/): `./gradlew test`.
-6. To just run the project execute: `./gradlew run`
-7. Start coding!
-
-## 👌 Helpful resources
-
-### Kotlin
-
-* [Kotlin Coding Conventions](https://kotlinlang.org/docs/coding-conventions.html)
-* [Comparison between Kotlin and Java](https://kotlinlang.org/docs/comparison-to-java.html)
-
-### Kotlin test
-
-* [Test code using JUnit in JVM - tutorial](https://kotlinlang.org/docs/jvm-test-using-junit.html)
-* [JUnit5 assertions](https://junit.org/junit5/docs/5.0.1/api/org/junit/jupiter/api/Assertions.html)
-
-## 👌 Codely Code Quality Standards
-
-Publishing this package we are committing ourselves to the following code quality standards:
-
-- 🤝 Respect **Semantic Versioning**: No breaking changes in patch or minor versions
-- 🤏 No surprises in transitive dependencies: Use the **bare minimum dependencies** needed to meet the purpose
-- 🎯 **One specific purpose** to meet without having to carry a bunch of unnecessary other utilities
-- ✅ **Tests** as documentation and usage examples
-- 📖 **Well documented ReadMe** showing how to install and use
-- ⚖️ **License favoring Open Source** and collaboration
-
-## 🔀 Related skeleton templates
-
-Opinionated TypeScript skeletons ready for different purposes:
-
-- [🔷🌱 TypeScript Basic Skeleton](https://github.com/CodelyTV/typescript-basic-skeleton)
-- [🔷🕸️ TypeScript Web Skeleton](https://github.com/CodelyTV/typescript-web-skeleton)
-- [🔷🌍 TypeScript API Skeleton](https://github.com/CodelyTV/typescript-api-skeleton)
-- [🔷✨ TypeScript DDD Skeleton](https://github.com/CodelyTV/typescript-ddd-skeleton)
-
-This very same basic skeleton philosophy implemented in other programming languages:
-
-- [✨ JavaScript Basic Skeleton](https://github.com/CodelyTV/javascript-basic-skeleton)
-- [☕ Java Basic Skeleton](https://github.com/CodelyTV/java-basic-skeleton)
-- [📍 Kotlin Basic Skeleton](https://github.com/CodelyTV/kotlin-basic-skeleton)
-- [🧬 Scala Basic Skeleton](https://github.com/CodelyTV/scala-basic-skeleton)
-- [🦈 C# Basic Skeleton](https://github.com/CodelyTV/csharp-basic-skeleton)
-- [🐘 PHP Basic Skeleton](https://github.com/CodelyTV/php-basic-skeleton)
+Thank you!

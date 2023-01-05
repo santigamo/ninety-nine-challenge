@@ -5,4 +5,7 @@ interface StockRepository {
     fun update(stock: Stock)
     fun findAll(): List<Stock>
     fun findByName(stockName: String): Result<Stock>
+    fun getSharePriceForHour(stock: Stock): Result<List<Double>>
+    fun getSharePriceForDay(stock: Stock): Result<List<Double>>
+    fun getSharePriceForWeek(stock: Stock): Result<List<Double>>
 }

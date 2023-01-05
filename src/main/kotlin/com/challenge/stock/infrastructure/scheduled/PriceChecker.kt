@@ -1,24 +1,21 @@
 package com.challenge.stock.infrastructure.scheduled
 
-import com.challenge.stock.application.update.StockUpdater
+import com.challenge.stock.application.StockService
 import java.util.*
 import javax.annotation.PostConstruct
 import kotlin.random.Random
 
-private const val PERIOD = 20000L
+private const val PERIOD = 20_000L // refresh every 20 seconds
 
-class PriceChecker (private val stockUpdater: StockUpdater){
+class PriceChecker (private val stockService: StockService){
 
     @PostConstruct
-    fun start() {
+    fun refreshCompanyInfo() {
         Timer().scheduleAtFixedRate(object : TimerTask() {
             override fun run() {
                 ThirdPartyApi.fetchCompanies().forEach {
-                    stockUpdater.execute(it.name, it.price)
+                    stockService.update(it.name, it.price)
                 }
-//                companyList.forEach { company ->
-//                    stockUpdater.execute(company, Random.nextDouble(0.1, 500.1))
-//                }
             }
         }, 0, PERIOD)
     }
